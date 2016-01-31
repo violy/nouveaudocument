@@ -1,0 +1,79 @@
+//
+
+@font-face {
+    // Bau Medium
+	font-family: 'Bau-Medium';
+	src: url('../fonts/bau/bau-medium.eot');
+	src: url('../fonts/bau/bau-medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/bau/bau-medium.woff') format('woff'),
+		url('../fonts/bau/bau-medium.svg') format('svg'),
+		url('../fonts/bau/bau-medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//
+
+@font-face {
+	// Borges Gris
+	font-family: 'Borges Gris';
+	src: url('../fonts/borges/BorgesGris.eot');
+	src: url('../fonts/borges/BorgesGris.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/borges/BorgesGris.woff') format('woff'),
+		url('../fonts/borges/BorgesGris.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    // Borges Negra
+	font-family: 'Borges Negra';
+	src: url('../fonts/borges/BorgesNegra-Italic.eot');
+	src: url('../fonts/borges/BorgesNegra-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/borges/BorgesNegra-Italic.woff') format('woff'),
+		url('../fonts/borges/BorgesNegra-Italic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+    // Borges Negra
+	font-family: 'Borges Negra';
+	src: url('../fonts/borges/BorgesNegra.eot');
+	src: url('../fonts/borges/BorgesNegra.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/borges/BorgesNegra.woff') format('woff'),
+		url('../fonts/borges/BorgesNegra.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+    // Borges Gris
+	font-family: 'Borges Gris';
+	src: url('../fonts/borges/BorgesGris-Italic.eot');
+	src: url('../fonts/borges/BorgesGris-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/borges/BorgesGris-Italic.woff') format('woff'),
+		url('../fonts/borges/BorgesGris-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+.bau{
+  font-family: $font-family-sans-serif;
+}
+.borges{
+  font-family: $font-family-serif;
+}
+@mixin bau-to-borges(){
+  font-family: $font-family-serif;
+  font-size: 1.15em;
+}
+.bau-to-borges{
+  @include bau-to-borges;
+}
+@mixin borges-to-bau{
+  font-family: $font-family-sans-serif;
+  font-size: .85em;
+}
+.borges-to-bau{
+  @include borges-to-bau;
+}

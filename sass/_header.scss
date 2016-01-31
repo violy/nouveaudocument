@@ -1,0 +1,59 @@
+.nd-header{
+  @include bau-to-borges;
+  line-height: 1.25em;
+  margin: 0 0 3em;
+  float: left;
+  .block-logo, nav{
+    float: left;
+  }
+  .block-logo{
+    font-size: 1.5em;
+  }
+  nav{
+    margin: 0 0 3em 0;
+    padding: 0 0 0 $grid-gutter-width;
+    cursor:default;
+    ul,li{
+      display: block;
+    }
+    a{
+      color:$text-color;
+      outline: none;
+      padding: 0 .25em;
+      position: relative;
+      margin: 0 0 0 -.25em;
+      &:hover {
+        color:$brand-primary;
+        text-decoration: none;
+      }
+      &:focus{
+        color:#fff;
+        background: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  .book-part{
+    float: left;
+    width: 100%;
+    line-height: 1.5em;
+    > div{
+      border-top:solid 1px $text-color;
+      &:first-child{
+        border-top:none;
+      }
+    }
+  }
+  .book-part-address{
+  }
+}
+.mobile-header{
+  display: none;
+  @media screen and (max-width: $screen-xs-max) {
+    display: block;
+    padding: $grid-gutter-width/2 $grid-gutter-width;
+    h2{
+      font-size:1em;
+    }
+  }
+}

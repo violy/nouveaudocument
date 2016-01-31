@@ -1,0 +1,55 @@
+.page-about{
+  background: $brand-primary;
+  .mobile-header{
+    .nd-logo{
+      @extend .white-on-brand;
+    }
+  }
+  .sidebar{
+    &,&:before{
+      background: #fff;
+    }
+    color: $brand-primary;
+    line-height: 1.5em;
+    h2{
+      font-size:1em;
+      font-weight: normal;
+      line-height: 1.75em;
+      padding: .5em 0;
+    }
+    p{
+      @extend .bau-to-borges;
+      text-indent: 3em;
+    }
+    h2 + p{
+            text-indent: 0;
+    }
+  }
+  h3,h4,p{
+    margin: 0;
+    //
+  }
+  $main-text-color:#fff;
+  main{
+    color:$main-text-color;
+  }
+  .nd-header{
+    nav{
+      a{
+        color:$main-text-color;
+        &:hover{
+          color:$text-color;
+        }
+        &:focus{
+          background: $text-color;
+          color:$main-text-color;
+        }
+      }
+    }
+  }
+  .about-content{
+    p{
+      font-size:1.5em;
+    }
+  }
+}
