@@ -89,8 +89,7 @@ module.exports = function (grunt) {
 		    options: {
 		      baseUrl: "js",
 		      mainConfigFile: "js/main.js",
-		      name: "main", /* assumes a production build using almond, if you don't use almond, you
-		                                 need to set the "includes" or "modules" option instead of name */
+		      name: "main", /* assumes a production build using almond, if you don't use almond, youneed to set the "includes" or "modules" option instead of name */
 		      out: "public/main-built.js"
 		    }
 		  }

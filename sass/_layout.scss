@@ -67,7 +67,9 @@ $sidebar-width:300px;
     font-size:16px;
     $sidebar-width: 400px;
     > .sidebar{
-      width: $sidebar-width;
+      &,&:before{
+        width: $sidebar-width;
+      }
     }
     > main{
       padding-left: $sidebar-width;
