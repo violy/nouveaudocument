@@ -34,6 +34,14 @@ $sidebar-width:300px;
     min-height: 100vh;
     margin: 0;
   }
+  > footer{
+    width:$sidebar-width;
+    padding: $grid-gutter-width;
+    @include bau-to-borges;
+    a{
+      color:$text-color;
+    }
+  }
 
   @media (max-width: $screen-xs-max){
     > .sidebar{

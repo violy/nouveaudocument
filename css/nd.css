@@ -9009,36 +9009,47 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   min-height: 100vh;
   margin: 0;
 }
+/* line 37, ../sass/_layout.scss */
+.site > footer {
+  width: 300px;
+  padding: 30px;
+  font-family: "Borges Gris", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.15em;
+}
+/* line 41, ../sass/_layout.scss */
+.site > footer a {
+  color: #222222;
+}
 @media (max-width: 629px) {
-  /* line 39, ../sass/_layout.scss */
+  /* line 47, ../sass/_layout.scss */
   .site > .sidebar {
     width: 100%;
     position: static;
   }
-  /* line 42, ../sass/_layout.scss */
+  /* line 50, ../sass/_layout.scss */
   .site > .sidebar:before {
     content: none;
   }
-  /* line 46, ../sass/_layout.scss */
+  /* line 54, ../sass/_layout.scss */
   .site > main {
     padding-left: 0;
     width: 100%;
   }
 }
 @media (min-width: 630px) {
-  /* line 52, ../sass/_layout.scss */
+  /* line 60, ../sass/_layout.scss */
   .site > main {
     width: 615px;
   }
 }
 @media (min-width: 900px) {
-  /* line 57, ../sass/_layout.scss */
+  /* line 65, ../sass/_layout.scss */
   .site > main {
     width: 900px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 62, ../sass/_layout.scss */
+  /* line 70, ../sass/_layout.scss */
   .site > main {
     width: 1200px;
   }
@@ -9048,11 +9059,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   .site {
     font-size: 16px;
   }
-  /* line 70, ../sass/_layout.scss */
+  /* line 78, ../sass/_layout.scss */
   .site > .sidebar, .site > .sidebar:before {
     width: 400px;
   }
-  /* line 74, ../sass/_layout.scss */
+  /* line 82, ../sass/_layout.scss */
   .site > main {
     padding-left: 400px;
     width: 1600px;
@@ -9289,8 +9300,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 /* line 87, ../sass/_page-product.scss */
 .page-product .content-block .list li {
-  padding: 0 0 0 2em;
-  text-indent: -2em;
+  padding: 0 0 0 1.5em;
+  text-indent: -1.5em;
 }
 /* line 93, ../sass/_page-product.scss */
 .page-product .contributors {
@@ -9300,7 +9311,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 /* line 96, ../sass/_page-product.scss */
 .page-product .contributors li {
   padding: 0 0 0 2em;
-  text-indent: -2em;
   position: relative;
 }
 /* line 100, ../sass/_page-product.scss */
@@ -9313,4 +9323,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   width: .1em;
   left: 1em;
   background: #D15D69;
+}
+/* line 111, ../sass/_page-product.scss */
+.page-product .contributors .initial {
+  display: inline-block;
+  min-width: 2em;
+  margin-left: -2em;
 }
