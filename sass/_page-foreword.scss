@@ -1,4 +1,4 @@
-.page-about{
+.page-foreword{
   background: $brand-primary;
   .mobile-header{
     .nd-logo{
@@ -32,6 +32,13 @@
   $main-text-color:#fff;
   main{
     color:$main-text-color;
+  }
+  footer{
+    .sidebar{
+      a{
+        color:$brand-primary;
+      }
+    }
   }
   .nd-header{
     nav{

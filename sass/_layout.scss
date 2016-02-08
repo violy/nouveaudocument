@@ -1,9 +1,57 @@
-$sidebar-width:300px;
+@include keyframes(site-intro){
+  0%{
+    @include translate(($grid-gutter-width - $sidebar-width),0);
+  }
+  100%{
+    @include translate(0,0);
+  }
+}
+.site-section{
+  display: table;
+  width:$sidebar-width*4;
+  > .sidebar{
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+  > *{
+    display: table-cell;
+  }
+  > .sidebar{
+    width:$sidebar-width;
+  }
+}
+.main-section{
+  > .sidebar, > main{
+    padding-top: 4em;
+  }
+}
+.main-sidebar{
+  padding-bottom: $grid-gutter-width;
+}
+footer{
+  a{
+    color:#fff;
+    &:hover{
+      color:#fff;
+      text-decoration: none;
+    }
+  }
+  .sidebar{
+    @include bau-to-borges;
+    padding-top: $grid-gutter-width;
+    padding-bottom:$grid-gutter-width;
+  }
+}
 .site{
   width:100%;
   padding-left: 0;
   padding-right: 0;
   font-size:12px;
+  @include animation(site-intro 1s ease-in-out 2s both);
+
+
+
+  /*
   > .sidebar, > main{
     padding-top: 60px;
   }
@@ -37,51 +85,43 @@ $sidebar-width:300px;
   > footer{
     width:$sidebar-width;
     padding: $grid-gutter-width;
-    @include bau-to-borges;
-    a{
-      color:$text-color;
-    }
-  }
 
-  @media (max-width: $screen-xs-max){
-    > .sidebar{
-      width: 100%;
-      position: static;
-      &:before{
-        content:none;
-      }
-    }
-    > main{
-      padding-left: 0;
+  }  */
+}
+@media (max-width: $screen-xs-max){
+  .site{
+    @include animation(none);
+  }
+  .site-section{
+    &,&>*,&>.sidebar{
+      display: block;
       width:100%;
     }
   }
-  @media (min-width: $screen-sm-min){
-    > main{
-      width:$sidebar-width*2 + $grid-gutter-width/2;
-    }
+}
+@media (min-width: $screen-sm-min){
+  .site-section{
+    width:($sidebar-width + $grid-gutter-width)*2;
   }
-  @media (min-width: $screen-md-min){
-    > main{
-      width:$sidebar-width*3;
-    }
+}
+@media (min-width: $screen-md-min){
+  .site-section{
+    width:($sidebar-width + $grid-gutter-width)*3;
   }
-  @media (min-width: $screen-lg-min){
-    > main{
-      width:$sidebar-width*4;
-    }
+}
+@media (min-width: $screen-lg-min){
+  .site-section{
+    width:($sidebar-width + $grid-gutter-width)*4;
   }
-  @media (min-width: $screen-xl-min) {
+}
+@media (min-width: $screen-xl-min) {
+  .site{
     font-size:16px;
-    $sidebar-width: 400px;
+  }
+  .site-section{
+    width: ($sidebar-width-large + $grid-gutter-width)*4;
     > .sidebar{
-      &,&:before{
-        width: $sidebar-width;
-      }
-    }
-    > main{
-      padding-left: $sidebar-width;
-      width:$sidebar-width*4;
+      width:$sidebar-width-large;
     }
   }
 }

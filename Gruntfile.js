@@ -72,13 +72,13 @@ module.exports = function (grunt) {
 				tasks: ['jshint:lib_test', 'qunit']
 			},
 			js:{
-				files: 'js/*',
+				files: 'src/*',
 				tasks: ['requirejs']
 			}
 		},
 		bowerRequirejs: {
 			target: {
-				rjsConfig: 'js/config.js',
+				rjsConfig: 'src/main.js',
 				options: {
 			      exclude: ['modernizr', 'sass-bootstrap', 'requirejs']
 			    }
@@ -87,8 +87,8 @@ module.exports = function (grunt) {
 		requirejs: {
 		  compile: {
 		    options: {
-		      baseUrl: "js",
-		      mainConfigFile: "js/main.js",
+		      baseUrl: "src",
+		      mainConfigFile: "src/main.js",
 		      name: "main", /* assumes a production build using almond, if you don't use almond, youneed to set the "includes" or "modules" option instead of name */
 		      out: "public/main-built.js"
 		    }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<meta name="viewport" content="max-scale=1.0,initial-scale=1.0" />
+	<script data-main="/main-built.js" src="/require.js"></script>
+	<link rel="stylesheet" href="/css/nd.css" />
+</head>
+<body class="<%= bodyClass %>">
+<div class="site">
+	<!-- mobile header -->
+	<header class="mobile-header">
+		<h2>
+			<div class="nd-logo"><span>Nouveau Document</span></div>
+		</h2>
+	</header>
+
+	<!-- main content -->
+	<div class="site-section main-section">
+
+		<!-- sidebar -->
+		<aside class="sidebar main-sidebar">
+			<%= sidebar %>
+		</aside>
+
+		<!-- main -->
+		<main class="main">
+			<div class="container-fluid">
+				<%= main %>
+			</div>
+		</main>
+	</div>
+
+	<!-- footer -->
+	<footer class="site-section">
+		<div class="sidebar">
+			<%= footer %>
+		</div>
+		<div></div>
+	</footer>
+</div>
+
+</body>
+</html>

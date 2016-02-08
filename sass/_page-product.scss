@@ -3,9 +3,8 @@
     background: $brand-primary;
     color:#fff;
     line-height: 1.5em;
-    &:before{
-      background: $brand-primary;
-    }
+  }
+  .main-sidebar{
     h3,h4{
       font-size:1em;
       font-weight: normal;
@@ -15,6 +14,9 @@
     h3{
       border-bottom:solid 1px #fff;
     }
+  }
+  .product-info{
+    margin: 3em 0;
   }
   h3,h4,p{
     margin: 0;
@@ -54,6 +56,7 @@
     }
   }
   .product-price{
+    margin: 0 0 3em;
     .buy-price{
       font-size:2em;
       line-height: 2em;
@@ -112,7 +115,11 @@
       display: inline-block;
       min-width: 2em;
       margin-left: -2em;
+      letter-spacing: -.05em;
       //
+    }
+    a:hover .initial{
+      text-decoration: underline;
     }
   }
 }

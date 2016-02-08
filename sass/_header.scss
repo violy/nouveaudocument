@@ -19,12 +19,27 @@
     a{
       color:$text-color;
       outline: none;
-      padding: 0 .25em;
+      padding: 0 0;
       position: relative;
       margin: 0 0 0 -.25em;
+      display: inline-block;
+      &:after{
+        content:' ';
+        display: block;
+        border-top:solid 1px $text-color;
+        width:0%;
+        position:absolute;
+        left:0;
+        bottom:1px;
+        @include transition(all $default-transition-duration);
+      }
       &:hover {
         color:$brand-primary;
         text-decoration: none;
+        &:after{
+          border-color:$brand-primary;
+          width: 100%;
+        }
       }
       &:focus{
         color:#fff;
@@ -41,6 +56,24 @@
       border-top:solid 1px $text-color;
       &:first-child{
         border-top:none;
+      }
+    }
+    a{
+      color:inherit;
+    }
+    .full-name{
+      display: none;
+    }
+    .book-alt-author{
+      text-decoration: none;
+      &:hover{
+        color:$brand-primary;
+        .initials{
+          display: none;
+        }
+        .full-name{
+          display: inline;
+        }
       }
     }
   }

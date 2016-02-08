@@ -4,6 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3/selection";
+@import "compass/css3/animation";
 @import "variables";
 @import "bootstrap/bootstrap";
 @import "fonts";
@@ -11,5 +13,5 @@
 @import "logotype";
 @import "layout";
 @import "header";
-@import "page-about";
+@import "page-foreword";
 @import "page-product";

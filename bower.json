@@ -1,0 +1,28 @@
+{
+  "name": "Nouveau Document",
+  "description": "Nouveau Document",
+  "main": "server.js",
+  "authors": [
+    "Arthur Violy <arthur@violy.net>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "publishing"
+  ],
+  "moduleType": [],
+  "homepage": "http://nouveaudocument.fr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jQuery": "^2.2.0",
+    "underscore": "^1.8.3",
+    "requirejs": "^2.1.22",
+    "backbone": "^1.2.3"
+  }
+}
