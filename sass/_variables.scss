@@ -2,7 +2,7 @@
 // ND Variables
 //
 $sidebar-width:300px;
-$sidebar-width-large:400px;
+$sidebar-width-large:380px;
 $grid-gutter-width:30px;
 
 
@@ -307,25 +307,25 @@ $screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  ($sidebar-width + $grid-gutter-width)*2;
+$screen-sm:                  $sidebar-width*2+$grid-gutter-width;
 $screen-sm-min:              $screen-sm !default;
 //** Deprecated `$screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  ($sidebar-width + $grid-gutter-width)*3;
+$screen-md:                  $sidebar-width*3;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  ($sidebar-width + $grid-gutter-width)*4;
+$screen-lg:                  $sidebar-width*4;
 $screen-lg-min:              $screen-lg !default;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
-$screen-xl:                  ($sidebar-width-large + $grid-gutter-width)*4;
+$screen-xl:                  $sidebar-width-large*4;
 $screen-xl-min:              $screen-xl;
 
 // So media queries don't overlap when required, provide a maximum
