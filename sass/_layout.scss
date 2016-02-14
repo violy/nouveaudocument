@@ -1,19 +1,89 @@
-@include keyframes(site-intro){
+@include keyframes(slideIn){
   0%{
-    @include translate(($grid-gutter-width - $sidebar-width),0);
+    background-color:transparentize(#fff,1);
   }
   100%{
-    @include translate(0,0);
+    background-color:#fff;
+  }
+}
+@include keyframes(slideInBrandPrimary){
+  0%{
+    background-color:transparentize($brand-primary,1);
+  }
+  100%{
+    background-color:$brand-primary;
+  }
+}
+@include keyframes(slideInSidebar){
+  0%{
+    @include translate(-100%,0);
+  }
+  100%{
+    @include translate(0%,0);
+  }
+}
+@include keyframes(slideInMain){
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.site{
+  width:100%;
+  padding-left: 0;
+  padding-right: 0;
+  font-size:12px;
+  background:#fff;
+  //@include translate(0,0);
+  //@include transition(transform 1s);
+  &.slideOut{
+    .sidebar{
+      position: relative;
+      @include transition-duration(.5s);
+      @include transition-timing-function(ease-in);
+      @include translate(-100%,0);
+      z-index: 10;
+    }
+    .main{
+      position: relative;
+      z-index: 9;
+      @include transition-duration(.5s);
+      @include transition-timing-function(ease-in);
+      //@include translate($sidebar-width,0);
+      opacity: 0;
+    }
+  }
+  &.slideIn{
+    position:absolute;
+    top:0;
+    @include animation(slideIn .2s both .5s);
+    &.page-foreword{
+      @include animation(slideInBrandPrimary .3s both .5s);
+    }
+    .sidebar{
+      position: relative;
+      z-index: 12;
+      @include animation(slideInSidebar 1s both .5s);
+    }
+    .main{
+      @include animation(slideInMain 1s both .75s);
+    }
   }
 }
 .site-section{
+  width:$sidebar-width*4;
+}
+.site-section-container{
   display: table;
-  //width:$sidebar-width*4;
+  width:100%;
   > .sidebar{
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width;
   }
   > *{
+    @include transition(transform .5s, opacity .5s);
     display: table-cell;
   }
   > .sidebar{
@@ -21,9 +91,13 @@
   }
 }
 .main-section{
-  > .sidebar, > main{
-    padding-top: 4em;
+  .site-section-container{
+    > .sidebar, > main{
+      padding-top: 4em;
+    }
   }
+}
+.main{
 }
 .main-sidebar{
   padding-bottom: $grid-gutter-width;
@@ -42,57 +116,14 @@ footer{
     padding-bottom:$grid-gutter-width;
   }
 }
-.site{
-  width:100%;
-  padding-left: 0;
-  padding-right: 0;
-  font-size:12px;
-  @include animation(site-intro 1s ease-in-out 2s both);
-
-
-
-  /*
-  > .sidebar, > main{
-    padding-top: 60px;
-  }
-  > .sidebar{
-    &:before{
-      content:' ';
-      display: block;
-      width:$sidebar-width;
-      height:100%;
-      position: fixed;
-      top:0;
-      left:0;
-      z-index: -1;
-    }
-    position: absolute;
-    min-height: 100%;
-    width: $sidebar-width;
-    padding-left: $grid-gutter-width;
-    padding-right: $grid-gutter-width;
-    padding-bottom: $grid-gutter-width;
-    > div{
-      margin: 0 0 2em 0;
-    }
-  }
-  > main{
-    padding-left:$sidebar-width;
-    max-width: 100%;
-    min-height: 100vh;
-    margin: 0;
-  }
-  > footer{
-    width:$sidebar-width;
-    padding: $grid-gutter-width;
-
-  }  */
-}
 @media (max-width: $screen-xs-max){
   .site{
     @include animation(none);
   }
   .site-section{
+    width:100%;
+  }
+  .site-section-container{
     &,&>*,&>.sidebar{
       display: block;
       width:100%;
@@ -120,7 +151,7 @@ footer{
   }
   .site-section{
     width: $sidebar-width-large*4;
-    > .sidebar{
+    .site-section-container > .sidebar{
       width:$sidebar-width-large;
     }
   }

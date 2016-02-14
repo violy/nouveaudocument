@@ -1,13 +1,16 @@
 {
 	"gezaroheim":{
+		"pageId":"gezaroheim",
 		"title":"Geza",
 		"bodyClass":"page-product"
 	},
 	"enriquepichonriviere":{
+		"pageId":"enriquepichonriviere",
 		"title":"Enrique",
 		"bodyClass":"page-product"
 	},
 	"foreword":{
+		"pageId":"foreword",
 		"title":"Avant-propos",
 		"bodyClass":"page-foreword"
 	}
