@@ -49,10 +49,14 @@ app.param(['page'], function (req, res, next, pageId) {
 	}
 });
 
+app.get('/',function(req,res){
+	res.redirect('/page-foreword');
+});
+
 app.get('/page-:page',function(req,res,next){
 	/*fs.readFile('./src/templates/layout.tpl.html','utf8',function(err,data){
 		if (err) throw err;
-		res.send(_.template(data)({title:'Nouveau Document'}));
+		res.send(_.template(data)({title:'Nouvenoau Document'}));
 	});*/
 });
 
